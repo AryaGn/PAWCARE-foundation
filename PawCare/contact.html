@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | PawCare Foundation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Simple JS -->
+    <script>
+        function submitContactForm() {
+            alert("Thank you for contacting us! We will get back to you soon.");
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">🐾 PawCare Foundation</div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a class="active" href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- CONTACT INTRO -->
+<section>
+    <h2>Contact Us</h2>
+    <p>
+        Have questions about adoption, volunteering, or donations?
+        Get in touch with PawCare Foundation — we’re happy to help.
+    </p>
+</section>
+
+<!-- CONTACT DETAILS -->
+<section class="services">
+    <h2>Our Contact Details</h2>
+
+    <div class="cards">
+        <div class="card">📍 Thrissur, Kerala, India</div>
+        <div class="card">📞 +91 6238979077</div>
+        <div class="card">📧 info@pawcare.org</div>
+        <div class="card">⏰ Mon – Sat: 9 AM – 6 PM</div>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section>
+    <h2>Send Us a Message</h2>
+
+    <form onsubmit="submitContactForm(); return false;">
+        <input type="text" placeholder="Full Name" required><br><br>
+        <input type="email" placeholder="Email Address" required><br><br>
+        <input type="tel" placeholder="Phone Number" required><br><br>
+
+        <select required>
+            <option value="">Select Enquiry Type</option>
+            <option>Adoption</option>
+            <option>Volunteer</option>
+            <option>Donation</option>
+            <option>General Enquiry</option>
+        </select><br><br>
+
+        <textarea placeholder="Your Message" required></textarea><br><br>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>
+
+<!-- GOOGLE MAP -->
+<section>
+    <h2>Find Us</h2>
+
+    <div class="table-box">
+        <iframe
+            src="https://www.google.com/maps?q=Thrissur,India&output=embed"
+            width="100%"
+            height="300"
+            style="border:0; border-radius:12px;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+<section>
+    <h2>Contact & Connect With Us</h2>
+
+    <div class="contact-info">
+        <p>📧 Email: <a href="mailto:aryaagn03@gmail.com">aryaagn03@gmail.com</a></p>
+        <p>📞 Call Us: <a href="tel:6238979077">6238979077</a></p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://wa.me/+916238979077" target="_blank" class="social whatsapp">
+            WhatsApp
+        </a>
+
+        <a href="https://www.pinterest.com/pawcarefoundation" target="_blank" class="social pinterest">
+            Pinterest
+        </a>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 PawCare Foundation | Reach Out With Care 🐾</p>
+</footer>
+
+</body>
+</html>
