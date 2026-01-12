@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate | PawCare Foundation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function generateReceipt() {
+            // Get form values
+            let name = document.getElementById("donor-name").value;
+            let email = document.getElementById("donor-email").value;
+            let amount = document.getElementById("donation-amount").value;
+
+            if (name === "" || email === "" || amount === "") {
+                alert("Please fill all required fields.");
+                return;
+            }
+
+            // Generate receipt details
+            let date = new Date().toLocaleDateString();
+            let receiptId = "PCF" + Math.floor(Math.random() * 100000);
+
+            // Insert values into receipt
+            document.getElementById("r-name").innerText = name;
+            document.getElementById("r-email").innerText = email;
+            document.getElementById("r-amount").innerText = amount;
+            document.getElementById("r-date").innerText = date;
+            document.getElementById("r-id").innerText = receiptId;
+
+            // Show receipt
+            document.getElementById("receipt").style.display = "block";
+        }
+
+        function printReceipt() {
+            window.print();
+        }
+    </script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">🐾 PawCare Foundation</div>
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a class="active" href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- DONATION FORM -->
+<section>
+    <h2>Select Payment Method</h2>
+
+    <form onsubmit="processPayment(); return false;">
+
+        <input type="text" id="donor-name" placeholder="Full Name" required><br><br>
+        <input type="email" id="donor-email" placeholder="Email Address" required><br><br>
+
+        <select id="donation-amount" required>
+            <option value="">Select Donation Amount</option>
+            <option>₹500</option>
+            <option>₹1,000</option>
+            <option>₹2,500</option>
+            <option>₹5,000</option>
+        </select><br><br>
+
+        <h3>Choose Payment Method</h3>
+
+        <input type="radio" name="payment" value="UPI" required> UPI  
+        <input type="radio" name="payment" value="Card"> Debit/Credit Card  
+        <input type="radio" name="payment" value="NetBanking"> Net Banking  
+        <br><br>
+
+        <!-- UPI QR (optional but impressive) -->
+        <div id="upi-box" style="display:none;">
+            <p>Scan & Pay using UPI</p>
+            <img src="upi-qr.png" alt="UPI QR Code" width="200">
+        </div>
+
+        <button type="submit" class="btn">Proceed to Pay</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 PawCare Foundation | Donation Receipt</p>
+</footer>
+
+</body>
+</html>
